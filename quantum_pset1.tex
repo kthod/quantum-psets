@@ -1,0 +1,342 @@
+\documentclass[12pt]{article}
+\usepackage{a4wide}
+\usepackage{color, amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage[document]{ragged2e}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{16pt}
+\renewcommand{\arraystretch}{1.9}
+\usepackage[english,greek]{babel}
+\usepackage{braket}
+\usepackage{mathtools}
+\usepackage{ragged2e}
+\renewcommand{\baselinestretch}{1.5}
+\input{epsf}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\begin{document}
+
+\greektext
+
+\noindent\rule{\textwidth}{2pt}
+\begin{center}
+{\bf ΕΙΣΑΓΩΓΗ ΣΤΟΥΣ ΚΒΑΝΤΙΚΟΥΣ ΥΠΟΛΟΓΙΣΤΕΣ}\\ 
+{\bf 1o Σετ Ασκήσεων }\\
+{\bf Καλαμαράκης Θεόδωρος:} 2018030022\\
+\end{center}
+\rule{\textwidth}{.5pt}
+\noindent
+
+\begin{center}
+
+\end{center}
+ 
+ 
+
+\justifying
+
+\section*{{\bf Μέρος  $\bf 1^o$ }}
+\section*{Απο βιβλίο \textlatin{McMahon}}
+\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 2.1}}
+Έστω $\ket{\psi} = \frac{(1-i)}{\sqrt{3}} \ket{0} + \frac{1}{\sqrt{3}}\ket{1}$
+
+Tότε η πιθανότητα το σύστημα να βρίσκεται στην κατάσταση $\ket{0}$ θα είναι 
+$$Pr_{\ket{0}}=|\braket{0|\psi}|^2=|\frac{(1-i)}{\sqrt{3}} \braket{0|0} + \frac{1}{\sqrt{3}}\braket{0|1}|^2=
+|\frac{(1-i)}{\sqrt{3}}|^2=\frac{2}{3}$$
+Ομοίως για να μετρήσουμε την κατάσταση $\ket{1}$ :
+
+$$Pr_{\ket{1}}=|\braket{1|\psi}|^2=|\frac{(1-i)}{\sqrt{3}} \braket{1|0} + \frac{1}{\sqrt{3}}\braket{1|1}|^2=
+|\frac{(1)}{\sqrt{3}}|^2=\frac{1}{3}$$\\
+\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 2.2}}
+{\centering
+$\ket{a} = \begin{pmatrix} -4i\\2 \end{pmatrix}$ και $\ket{b} = \begin{pmatrix} 1\\-1+i \end{pmatrix}$\\
+}
+{\bf { (A)}} $$\ket{a+b} = \ket{a}+\ket{b} = \begin{pmatrix} -4i\\2 \end{pmatrix} + \begin{pmatrix} 1\\-1+i \end{pmatrix}=
+\begin{pmatrix} -4i+1\\1+i \end{pmatrix}$$
+
+{\bf { (B)}} $$3\ket{a} - 2\ket{b} = 3\begin{pmatrix} -4i\\2 \end{pmatrix} - 2\begin{pmatrix} 1\\-1+i \end{pmatrix}=
+\begin{pmatrix} -12i\\6 \end{pmatrix} - \begin{pmatrix} 2\\-2+2i \end{pmatrix}=\begin{pmatrix} -12i-2\\8+2i \end{pmatrix}$$
+    
+{\bf { (\textlatin{C})}} $$\braket{a|a} = (\; 4i \; \; \; \; 2\;)\begin{pmatrix} -4i\\2 \end{pmatrix} = -16 i^2 + 4 =20$$
+Aρα το κανονικοποιημένο $\ket{a}$ θα είναι 
+$$ \ket{a}_{norm}= \frac{1}{\sqrt{\braket{a|a}}}\ket{a}=\frac{1}{\sqrt{20}}\begin{pmatrix} -4i\\2 \end{pmatrix} = \begin{pmatrix} -\frac{2i}{\sqrt{5}}\\\frac{1}{\sqrt{5}} \end{pmatrix} $$
+ Aντίστοιχα για το $\ket{b}$ έχουμε:
+ $$\braket{b|b} = (\; 1 \; \; \; \; -1 -i\;)\begin{pmatrix} 1\\-1+i \end{pmatrix} = 1 + 2 =3$$ 
+ $$ \ket{b}_{norm}= \frac{1}{\sqrt{\braket{b|b}}}\ket{b}=\frac{1}{\sqrt{3}}\begin{pmatrix} 1\\-1 + i \end{pmatrix} $$
+ \\ \rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 2.3}}
+{\centering
+$\ket{+} = \frac{\ket{0}+\ket{1}}{\sqrt{2}}$ και $\ket{-} = \frac{\ket{0}-\ket{1}}{\sqrt{2}}$\\
+}
+Για να εκφράσουμε το $\ket{0}$ συναρτήσει των $\ket{+},\ket{-}$ εργαζόμαστε ώ εξής:
+
+
+$$ \ket{+} + \ket{-} =\frac{\ket{0}+\ket{1}}{\sqrt{2}}+ \frac{\ket{0}-\ket{1}}{\sqrt{2}} = \sqrt{2}\ket{0}\Leftrightarrow\ket{0}=\frac{\ket{+}+\ket{-}}{\sqrt{2}}$$
+Αντίστοιχα για το $\ket{1}$
+$$ \ket{+} - \ket{-} =\frac{\ket{0}+\ket{1}}{\sqrt{2}}+ \frac{-\ket{0}+\ket{1}}{\sqrt{2}} = \sqrt{2}\ket{1}\Leftrightarrow\ket{1}=\frac{\ket{+}-\ket{-}}{\sqrt{2}}$$
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 2.4}}
+\begin{enumerate}
+\item [\bf{ (A)}]
+$$\ket{\psi}  = \frac{3i\ket{0}+4\ket{1}}{5}$$
+Για να είναι το $\ket{\psi}$ κανονικοποιημένο πρέπει να ισχύει $\braket{\psi|\psi}=1$ \\
+Χρησιμοποιώντας οτι $ \braket{0|0}=\braket{1|1}=1$ και $ \braket{0|1}=\braket{1|0}=0$
+
+$$ \braket{\psi|\psi} = \frac{(-3i\bra{0}+4\bra{1})}{5}\frac{(3i\ket{0}+4\ket{1})}{5} = \frac{-9i^2\braket{0|0}-12i\braket{0|1}+12i\braket{1|0}+16\braket{1|1}}{25}=$$
+$$=\frac{-9(-1)+16}{25}=1 $$\\
+Άρα το $\ket{\psi}$ είναι κανονικοποιημένο.\\ \\
+\item [\bf{ (B)}]
+Χρησιμοποιώντας τις δύο σχέσεις που αποδείχθηκαν στην προηγούμενη άσκηση για τα $\ket{0}$ kai $\ket{1}$ έχουμε:
+
+
+$$\ket{\psi}  = \frac{3i\ket{0}+4\ket{1}}{5} =  \frac{3i(\frac{\ket{+}+\ket{-}}{\sqrt{2}})+4(\frac{\ket{+}-\ket{-}}{\sqrt{2}})}{5} = \frac{(3i+4)\ket{+}+(3i-4)\ket{-}}{5\sqrt{2}} $$
+\end{enumerate}
+\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 2.6}}
+
+Θεωρούμε οτι $ \braket{h|h}=\braket{v|v}=1$ και $ \braket{h|v}=\braket{v|h}=0$\\
+
+$$\ket{\psi_1} = \frac{1}{2}\ket{h}+\frac{\sqrt{3}}{2}\ket{v} \;,\;\ket{\psi_2} = \frac{1}{2}\ket{h}-\frac{\sqrt{3}}{2}\ket{v} \;,\; \ket{\psi_3} = \ket{h}$$\\
+\begin{enumerate}
+    
+
+    \item[\bf (A)] $$|\braket{\psi_1|\psi_2}|^2 = | (\frac{1}{2}\bra{h}+\frac{\sqrt{3}}{2}\bra{v} )( \frac{1}{2}\ket{h}-\frac{\sqrt{3}}{2}\ket{v})|^2 
+=|\frac{1}{4}\braket{h|h} -\frac{\sqrt{3}}{4}\braket{h|v} + \frac{\sqrt{3}}{4}\braket{v|h}-\frac{3}{4}\braket{v|v} |^2= $$
+$$= |\frac{1}{4} - \frac{3}{4}|^2 = \frac{1}{4} $$\\
+\item[\bf (B)] $$|\braket{\psi_1|\psi_3}|^2 = | (\frac{1}{2}\bra{h}+\frac{\sqrt{3}}{2}\bra{v} )\ket{h}|^2 
+=|\frac{1}{2}\braket{h|h}  + \frac{\sqrt{3}}{2}\braket{v|h} |^2= |\frac{1}{2} |^2 = \frac{1}{4} $$
+
+\item[\bf (\textlatin{C})] $$|\braket{\psi_2|\psi_3}|^2 = | (\frac{1}{2}\bra{h}-\frac{\sqrt{3}}{2}\bra{v} )\ket{h}|^2 
+=|\frac{1}{2}\braket{h|h}  - \frac{\sqrt{3}}{2}\braket{v|h} |^2= |\frac{1}{2} |^2 = \frac{1}{4} $$
+
+\end{enumerate}
+\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 3.1}}
+    $$\ket{\psi} = a\ket{0}+b\ket{1} $$
+{\bf Για τον πίνακα $ X$ έχουμε:} 
+$$X\ket{\psi} = (\ket{0}\bra{1} + \ket{1}\bra{0})(a\ket{0}+b\ket{1}) = a\ket{0}\braket{1|0} +b\ket{0}\braket{1|1} + a \ket{1}\braket{0|0}+b\ket{1}\braket{0|1} =$$
+$$= b\ket{0} + a\ket{1}  $$
+Παρατηρούμε οτι το $\ket{0}$ έγινε $\ket{1}$ και το $\ket{1}$ έγινε $\ket{0}$ , άρα πράγματι , πρόκειται για την αναπαράσταση εξωτερικού γινομένου της πύλης $X$\\ \\
+{\bf Για τον πίνακα $Y$ έχουμε:} 
+$$Y\ket{\psi} = (-i\ket{0}\bra{1} + i\ket{1}\bra{0})(a\ket{0}+b\ket{1}) = -ai\ket{0}\braket{1|0} -ib\ket{0}\braket{1|1} + ai\ket{1}\braket{0|0}+i\ket{1}\braket{0|1} =$$
+$$= -bi\ket{0} + ai\ket{1}  $$
+Παρατηρούμε οτι το $\ket{0}$ έγινε $i\ket{1}$ και το $\ket{1}$ έγινε $-i\ket{0}$ , άρα πράγματι , πρόκειται για την αναπαράσταση εξωτερικού γινομένου της πύλης $Y$
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 3.2}}
+Χρησιμοποιώντας οτι $X\ket{0} = \ket{1} $ και $X\ket{1} = \ket{0} $
+$$ X = \begin{pmatrix}\braket{0|X|0} & \braket{0|X|1} \\ \braket{1|X|0}&\braket{1|X|1}\end{pmatrix}
+= \begin{pmatrix}\braket{0|1} & \braket{0|0} \\ \braket{1|1}&\braket{1|0}\end{pmatrix}=\begin{pmatrix}\;0 \;\;\;& 1\; \;\\\; 1\;\;\;&0\;\;\end{pmatrix}$$
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 3.3}}
+Aρχικά υπολογίζουμε τα $X\ket{+}$ και $X\ket{-}$
+$$X\ket{+} = \frac{X\ket{0}+X\ket{1}}{\sqrt{2}} = \frac{\ket{1}+\ket{0}}{\sqrt{2}} = \ket{+}$$
+$$X\ket{-} = \frac{X\ket{0}-X\ket{1}}{\sqrt{2}} = \frac{\ket{1}-\ket{0}}{\sqrt{2}} = -\ket{-}$$\\
+Άρα
+$$ X = \begin{pmatrix}\braket{+|X|+} & \braket{+|X|-} \\ \braket{-|X|+}&\braket{-|X|-}\end{pmatrix}
+= \begin{pmatrix}\braket{+|+} & -\braket{+|-} \\ \braket{-|+}&-\braket{-|-}\end{pmatrix}=\begin{pmatrix}\;1 \;\;\;& 0\; \;\\\; 0\;\;\;&-1\;\;\end{pmatrix}$$
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 3.4}}
+
+$$\hat {A} = i\ket{1}\bra{1} + \frac{\sqrt{3}}{2}\ket{1}\bra{2} + 2\ket{2}\bra{1} - \ket{2}\bra{3}\Leftrightarrow$$
+$$\Leftrightarrow \hat {A}^\dag = (i\ket{1}\bra{1} )^\dag + (\frac{\sqrt{3}}{2}\ket{1}\bra{2})^\dag + (2\ket{2}\bra{1})^\dag - (\ket{2}\bra{3})^\dag=-i\ket{1}\bra{1} + \frac{\sqrt{3}}{2}\ket{2}\bra{1} + 2\ket{1}\bra{2} - \ket{3}\bra{2}$$
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 3.5}}
+Για να βρούμε τις ιδιοτιμές πρέπει να λύσουμε την εξίσωση ιδιοτιμών $det|X-\lambda I|$
+
+$$ \det |X-\lambda I| = 0 \Leftrightarrow \det \begin{vmatrix}\begin{pmatrix}\;0 \;\; & 1 \;\;\\ \;1 \;\; & 0 \;\;\end{pmatrix} -\begin{pmatrix}\;\lambda \;\; & 0 \;\;\\\;0 \;\; & \lambda \;\;\end{pmatrix}\end{vmatrix}  =0 \Leftrightarrow$$
+
+$$ \Leftrightarrow\det \begin{vmatrix}\;-\lambda \;\; & 1 \;\;\\ \;1 \;\; & -\lambda \;\;\end{vmatrix} = \lambda^2 -1=0 $$ \\
+Άρα οι ιδιοτιμές είναι οι $\lambda_1 = 1$ και $\lambda_2=-1$ \\
+Για τα ιδιοδιανύσματα έχουμε:
+Εστω $\ket{v}=\begin{pmatrix} v_1 \\ v_2\end{pmatrix}$
+$$X\ket{v}=\lambda\ket{ v} \Leftrightarrow \begin{pmatrix}\;0 \;\; & 1 \;\;\\ \;1 \;\; & 0 \;\;\end{pmatrix}\begin{pmatrix} v_1 \\ v_2\end{pmatrix}=\lambda\begin{pmatrix} v_1 \\ v_2\end{pmatrix} \Leftrightarrow 
+\begin{pmatrix} v_2 \\ v_1\end{pmatrix} = \lambda \begin{pmatrix} v_1 \\ v_2\end{pmatrix}$$\\
+Για $\lambda =1 $ τότε $v_1=v_2=a$ άρα $\ket{v_1} = \begin{pmatrix} a \\ a \end{pmatrix}$\\
+Για $\lambda =-1 $ τότε $v_1=-v_2=a$ άρα $\ket{v_2} = \begin{pmatrix} a \\ -a \end{pmatrix}$ 
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 3.6}}
+
+$$Y=\begin{pmatrix}
+    \;0 \;\; & -i \;\;\\ \;i \;\; & 0 \;\;
+\end{pmatrix} $$\\
+Άρα $Tr(Y)=0+0 = 0$\\
+\rule{\textwidth}{.5pt}
+\section*{{\bf Μέρος  $\bf 2^o$ }}
+
+
+
+\section*{{\bfΆσκηση 1}}
+{\bf Για τον πίνακα $Ι$}\\
+Για να βρούμε τις ιδιοτιμές πρέπει να λύσουμε την εξίσωση ιδιοτιμών $det|Ι-\lambda I|$
+
+$$ \det |Ι-\lambda I| = 0 \Leftrightarrow \det \begin{vmatrix}\begin{pmatrix}\;1 \;\; & 0 \;\;\\ \;0 \;\; & 1 \;\;\end{pmatrix} -\begin{pmatrix}\;\lambda \;\; & 0 \;\;\\\;0 \;\; & \lambda \;\;\end{pmatrix}\end{vmatrix}  =0 \Leftrightarrow$$
+
+$$ \Leftrightarrow\det \begin{vmatrix}\;1-\lambda \;\; & 0 \;\;\\ \;0 \;\; & 1-\lambda \;\;\end{vmatrix} = (1-\lambda)^2 =0 $$ \\
+Άρα η ιδιοτιμή είναι οη $\lambda = 1$  \\
+Για τα ιδιοδιανύσματα έχουμε:
+Εστω $\ket{v}=\begin{pmatrix} v_1 \\ v_2\end{pmatrix}$
+$$X\ket{v}=\lambda\ket{ v} \Leftrightarrow \begin{pmatrix}\;1 \;\; & 0 \;\;\\ \;0 \;\; & 1 \;\;\end{pmatrix}\begin{pmatrix} v_1 \\ v_2\end{pmatrix}=\lambda\begin{pmatrix} v_1 \\ v_2\end{pmatrix} \Leftrightarrow 
+\begin{pmatrix} v_1 \\ v_2\end{pmatrix} = \lambda \begin{pmatrix} v_1 \\ v_2\end{pmatrix}$$\\
+Για $\lambda =1 $ τότε η εξίσωση έχει άπειρες λύσεις άρα ιδιοδιανύσαματα είναι όλα τα διανύσαμτα\\ \\
+{\bf Για τον πίνακα $X$}\\
+
+
+$$ \det |X-\lambda I| = 0 \Leftrightarrow \det \begin{vmatrix}\begin{pmatrix}\;0 \;\; & 1 \;\;\\ \;1 \;\; & 0 \;\;\end{pmatrix} -\begin{pmatrix}\;\lambda \;\; & 0 \;\;\\\;0 \;\; & \lambda \;\;\end{pmatrix}\end{vmatrix}  =0 \Leftrightarrow$$
+
+$$ \Leftrightarrow\det \begin{vmatrix}\;-\lambda \;\; & 1 \;\;\\ \;1 \;\; & -\lambda \;\;\end{vmatrix} = \lambda^2 -1=0 $$ \\
+Άρα οι ιδιοτιμές είναι οι $\lambda_1 = 1$ και $\lambda_2=-1$ \\
+Για τα ιδιοδιανύσματα έχουμε:
+Εστω $\ket{v}=\begin{pmatrix} v_1 \\ v_2\end{pmatrix}$
+$$X\ket{v}=\lambda\ket{ v} \Leftrightarrow \begin{pmatrix}\;0 \;\; & 1 \;\;\\ \;1 \;\; & 0 \;\;\end{pmatrix}\begin{pmatrix} v_1 \\ v_2\end{pmatrix}=\lambda\begin{pmatrix} v_1 \\ v_2\end{pmatrix} \Leftrightarrow 
+\begin{pmatrix} v_2 \\ v_1\end{pmatrix} = \lambda \begin{pmatrix} v_1 \\ v_2\end{pmatrix}$$\\
+Για $\lambda =1 $ τότε $v_1=v_2=a$ άρα $\ket{v_1} = a\begin{pmatrix} 1 \\ 1 \end{pmatrix}$\\
+Για $\lambda =-1 $ τότε $v_1=-v_2=a$ άρα $\ket{v_2} = a\begin{pmatrix} 1 \\ -1 \end{pmatrix}$\\ \\
+{\bf Για τον πίνακα $Y$}\\
+
+
+$$ \det |Y-\lambda I| = 0 \Leftrightarrow \det \begin{vmatrix}\begin{pmatrix}\;0 \;\; & -i \;\;\\ \;i \;\; & 0 \;\;\end{pmatrix} -\begin{pmatrix}\;\lambda \;\; & 0 \;\;\\\;0 \;\; & \lambda \;\;\end{pmatrix}\end{vmatrix}  =0 \Leftrightarrow$$
+
+$$ \Leftrightarrow\det \begin{vmatrix}\;-\lambda \;\; & -i \;\;\\ \;i \;\; & -\lambda \;\;\end{vmatrix} = \lambda^2 -1=0 $$ \\
+Άρα οι ιδιοτιμές είναι οι $\lambda_1 = 1$ και $\lambda_2=-1$ \\
+Για τα ιδιοδιανύσματα έχουμε:
+Εστω $\ket{v}=\begin{pmatrix} v_1 \\ v_2\end{pmatrix}$
+$$Y\ket{v}=\lambda\ket{ v} \Leftrightarrow \begin{pmatrix}\;0 \;\; & -i \;\;\\ \;i \;\; & 0 \;\;\end{pmatrix}\begin{pmatrix} v_1 \\ v_2\end{pmatrix}=\lambda\begin{pmatrix} v_1 \\ v_2\end{pmatrix} \Leftrightarrow 
+\begin{pmatrix} -iv_2 \\ iv_1\end{pmatrix} = \lambda \begin{pmatrix} v_1 \\ v_2\end{pmatrix}$$\\
+Για $\lambda =1 $ τότε $v_1=-iv_2=a$ άρα $\ket{v_1} = a\begin{pmatrix} 1 \\ i \end{pmatrix}$\\
+Για $\lambda =-1 $ τότε $v_1=iv_2=a$ άρα $\ket{v_2} = a\begin{pmatrix} 1 \\ -i \end{pmatrix}$ \\
+{\bf Για τον πίνακα $Z$}\\
+
+
+$$ \det |Z-\lambda I| = 0 \Leftrightarrow \det \begin{vmatrix}\begin{pmatrix}\;1 \;\; & 0 \;\;\\ \;0 \;\; & -1 \;\;\end{pmatrix} -\begin{pmatrix}\;\lambda \;\; & 0 \;\;\\\;0 \;\; & \lambda \;\;\end{pmatrix}\end{vmatrix}  =0 \Leftrightarrow$$
+
+$$ \Leftrightarrow\det \begin{vmatrix}\;1-\lambda \;\; & 0 \;\;\\ \;0 \;\; & -1-\lambda \;\;\end{vmatrix} = -(1-\lambda^2 )=0 $$ \\
+Άρα οι ιδιοτιμές είναι οι $\lambda_1 = 1$ και $\lambda_2=-1$ \\
+Για τα ιδιοδιανύσματα έχουμε:
+Εστω $\ket{v}=\begin{pmatrix} v_1 \\ v_2\end{pmatrix}$
+$$Z\ket{v}=\lambda\ket{ v} \Leftrightarrow \begin{pmatrix}\;1 \;\; & 0 \;\;\\ \;0 \;\; & -1 \;\;\end{pmatrix}\begin{pmatrix} v_1 \\ v_2\end{pmatrix}=\lambda\begin{pmatrix} v_1 \\ v_2\end{pmatrix} \Leftrightarrow 
+\begin{pmatrix} v_1 \\ -v_2\end{pmatrix} = \lambda \begin{pmatrix} v_1 \\ v_2\end{pmatrix}$$\\
+Για $\lambda =1 $ τότε $v_1=a$ και $v_2 =0 $ άρα $\ket{v_1} = a\begin{pmatrix} 1 \\ 0 \end{pmatrix}$\\
+Για $\lambda =-1 $ τότε $v_2=a$ και $v_1 =0 $ άρα $\ket{v_2} = a\begin{pmatrix} 0 \\ 1 \end{pmatrix}$ \\
+\\\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 2}}
+
+
+Έστω $$A = \begin{bmatrix} \;\;1 &\;\; 0 &\;\; 0&\;\; 0\;\; \\
+    \;\;0 &\;\; 0 &\;\; 1&\;\; 0\;\;\\
+    \;\;0 &\;\; 1 &\;\; 0&\;\; 0\;\;\\
+    \;\;0 &\;\; 0 &\;\; 0&\;\; 1\;\;      \end{bmatrix} $$
+
+
+$$ \det |A-\lambda I| = 0 \Leftrightarrow \det \begin{vmatrix}\begin{bmatrix} \;\;1 &\;\; 0 &\;\; 0&\;\; 0\;\; \\
+    \;\;0 &\;\; 0 &\;\; 1&\;\; 0\;\;\\
+    \;\;0 &\;\; 1 &\;\; 0&\;\; 0\;\;\\
+    \;\;0 &\;\; 0 &\;\; 0&\;\; 1\;\;      \end{bmatrix} -\begin{bmatrix} \;\;\lambda &\;\; 0 &\;\; 0&\;\; 0\;\; \\
+        \;\;0 &\;\; \lambda &\;\; 0&\;\; 0\;\;\\
+        \;\;0 &\;\; 0&\;\; \lambda&\;\; 0\;\;\\
+        \;\;0 &\;\; 0 &\;\; 0&\;\; \lambda\;\;      \end{bmatrix} \end{vmatrix}  =0 \Leftrightarrow$$
+
+$$ \Leftrightarrow\det \begin{vmatrix} \;\;1-\lambda &\;\; 0 &\;\; 0&\;\; 0\;\; \\
+    \;\;0 &\;\;- \lambda &\;\; 1&\;\; 0\;\;\\
+    \;\;0 &\;\; 1&\;\; -\lambda&\;\; 0\;\;\\
+    \;\;0 &\;\; 0 &\;\; 0&\;\;1- \lambda\;\;   \end{vmatrix} = (1-\lambda )
+    \begin{vmatrix} \;\;-\lambda &\;\; 1 &\;\; 0\;\; \\
+        \;\;1 &\;\; -\lambda &\;\; 0\;\;\\
+        \;\;0 &\;\; 0&\;\; 1-\lambda\;\;
+     \end{vmatrix}=$$
+     $$=  (1-\lambda )(-\lambda \begin{vmatrix} \;\;-\lambda &\;\; 0\;\; \\
+        \;\; 0&\;\; 1-\lambda\;\;
+     \end{vmatrix} - \begin{vmatrix} \;\;1 &\;\; 0\;\; \\
+        \;\; 1&\;\; 1-\lambda\;\;
+     \end{vmatrix}
+     )=  (1-\lambda )(\lambda^2 (1-\lambda) -(1-\lambda))=(1-\lambda)^2(\lambda^2-1)=$$
+     $$=-(1-\lambda)^3(1+\lambda)=0 $$ \\
+Άρα οι ιδιοτιμές είναι οι $\lambda_1 = 1$ και $\lambda_2=-1$ \\
+Για τα ιδιοδιανύσματα έχουμε:
+Εστω $\ket{v}=\begin{bmatrix} v_1 \\ v_2\\v_3\\v_4\end{bmatrix}$
+$$A\ket{v}=\lambda\ket{ v} \Leftrightarrow \begin{bmatrix} \;\;1 &\;\; 0 &\;\; 0&\;\; 0\;\; \\
+    \;\;0 &\;\; 0 &\;\; 1&\;\; 0\;\;\\
+    \;\;0 &\;\; 1 &\;\; 0&\;\; 0\;\;\\
+    \;\;0 &\;\; 0 &\;\; 0&\;\; 1\;\;      \end{bmatrix} \begin{bmatrix} v_1 \\ v_2\\v_3\\v_4 \end{bmatrix}=\lambda\begin{bmatrix} v_1 \\ v_2\\v_3\\v_4\end{bmatrix} \Leftrightarrow $$
+$$\Leftrightarrow \begin{bmatrix} v_1 \\ v_3\\v_2\\v_4 \end{bmatrix} = \lambda \begin{bmatrix} v_1 \\ v_2\\v_3\\v_4 \end{bmatrix}$$\\
+Για $\lambda =1 $ τότε $v_1=a$ και $v_4 =d $  και $v_2 =v_3=b $ άρα $\ket{v_1} = [\;a \;,\; b\;,\;b\;,\;d \;]^T$\\
+Για $\lambda =-1 $ τότε $v_1=0$ και $v_4 =0 $ και $v_2 =-v_3=b $ άρα $\ket{v_2} =[ \;0 \;,\; b\;,\;-b\;,\;0 \;]^T$ \\
+\rule{\textwidth}{.5pt}
+
+\section*{{\bfΆσκηση 3}}
+{\centering
+$v=[\;1 \;,\;0\;]^T$ και $w=[\;0 \;,\;1\;]^T$
+}
+
+
+{\bf { (\textlatin{a})}}$$v^\dag v = [\;1 \;\;0\;]\begin{bmatrix}
+    1\\0
+\end{bmatrix}=1$$
+
+{\bf { (\textlatin{b})}} $$v^\dag w = [\;1 \;\;0\;]\begin{bmatrix}
+    0\\1
+\end{bmatrix}=0$$
+
+{\bf { (\textlatin{c)}}} $$vv^\dag  = \begin{bmatrix}
+    1\\0
+\end{bmatrix}[\;1 \;\;0\;]=\begin{bmatrix}\; 1 \;&\; 0\; \;\\\;0\;&\;0\;\;\end{bmatrix}$$
+
+
+{\bf { (\textlatin{d)}}} $$v^\dag X w = [\;1 \;\;0\;]\begin{bmatrix}
+    \;0\;&\;1\;\;\\\;1\;&\;0\;\;
+\end{bmatrix}\begin{bmatrix}
+    0\\1
+\end{bmatrix}=[\;0 \;\;1\;]\begin{bmatrix}
+    0\\1
+\end{bmatrix}=1$$\\
+\rule{\textwidth}{.5pt}
+\section*{{\bfΆσκηση 4}}
+{\bf { (\textlatin{a})}}
+$$Mv=\lambda v \Rightarrow v^\dag Mv=v\lambda v^\dag v \Leftrightarrow v^\dag Mv =\lambda \braket{v|v} \Leftrightarrow $$
+$$\Leftrightarrow \lambda = \frac{ v^\dag Mv}{ \braket{v|v}} $$
+$$\lambda^* = (\frac{ v^\dag Mv}{ \braket{v|v}})^\dag = \frac{ v^\dag M^\dag v}{ \braket{v|v}}=\frac{ v^\dag Mv}{ \braket{v|v}} = \lambda $$\\
+Άρα το $\lambda$ είναι πραγματικός\\ \\
+{\bf { (\textlatin{b})}}\\
+Έστω $v^\dag M v = c$ οπου $c \in \mathbb{C}$\\
+Τότε $$ c^* = (v^\dag M v)^\dag = v^\dag M^\dag v = v^\dag M v = c$$\\
+Άρα το $c$ είνια πραγματικός.\\
+\rule{\textwidth}{.5pt}
+
+\section*{{\bfΆσκηση 5}}
+
+$$ U = e^{iM}=\sum_k \frac{(iM)^K}{k!}$$
+$$ U^\dag=(e^{iM})^\dag=(\sum_k \frac{(iM)^k}{k!})^\dag=\sum_k (\frac{(iM)^k}{k!})^\dag=\sum_k \frac{(-iM^\dag)^k}{k!}=\sum_k \frac{(i(-M))^k}{k!}$$
+Αρα  
+$$ UU^\dag = \sum_k \frac{(iM)^k}{k!}\sum_k \frac{(i(-M)^k}{k!}=
+ \sum_k  \sum_m \frac{(iM)^m}{m!}\frac{(i(-M))^{k-m}}{(k-m)!}=
+ \sum_k  \sum_m \frac{i^k M^m(-M))^{k-m}}{m!(k-m)!}=$$
+ $$= \sum_k \frac{i^k}{k!} \sum_m \frac{k!}{m!(k-m)!}M^m(-M))^{k-m} ={\bf (\bf*)} \sum_k \frac{i^k}{k!} (M + (-M))^k =\sum_k \frac{i^k}{k!} {\bf 0}^k$$\\ 
+Όπου ${\bf 0}$ είναι ο μηδενικός πίνακας.\\
+ Στο σημείο ${\bf (*)}$ εκμεταλευτήκαμε το διωνυμικό θεώρημα σύμφωνα με το οποίο $(A+B)^k=\sum_m  \frac{k!}{m!(k-m)!}A^mB^{k-m}$  \\ \\
+Στην σχέση που καταλήξαμε ισχύει οτι ${\bf 0}^0 ={\bf I}$ ενώ ${\bf 0}^k ={\bf 0}$ για $k>0$\\
+Αρα $UU^\dag = \frac{i^0}{0!}{\bf I}= {\bf I}$\\
+\rule{\textwidth}{.5pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
